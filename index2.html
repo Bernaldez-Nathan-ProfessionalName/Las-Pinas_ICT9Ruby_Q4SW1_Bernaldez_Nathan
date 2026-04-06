@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICE ACTIVITY</title>
+
+    <style>
+        body{
+            font-family: cursive;
+            background-color: brown;
+        }
+
+        input{
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 20px;
+            font-family: cursive;
+        }
+
+        .container{
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+            background-color: rgb(240, 232, 232);
+            border-radius: 30px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    
+    <form onsubmit="authenticate()">
+        <div class="container">
+        <h3><center>Login Page</center></h3>
+        <label> Username </label>
+        <input type="text" id="uname" placeholder="Enter Username" required>
+        <br>
+        <br>
+        <label> Password </label>
+        <input type="password" id="pwrd" placeholder="Enter Password" minlength="8"
+        maxlength="10" required>
+        <br>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl">Forgot Password?</a>
+        <br>
+        <input type="checkbox"> Remember me
+        <br>
+        <input type="submit" value="Login">
+        </div>
+
+    </form>
+
+    <script>
+        function authenticate(){
+            var username = document.getElementById('uname').value;
+            var password = document.getElementById('pwrd').value;
+
+            if(username === 'sampleuser' && password === '12345678'){
+                alert ("Welcome " + username);
+            }else{
+                alert ("Invalid Username or Password");
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>    
